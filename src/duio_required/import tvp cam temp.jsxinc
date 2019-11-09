@@ -1,0 +1,35 @@
+	//TVPaint
+	var ui_tvpCameraOptionsWindow = DuAEF.DuScriptUI.createPopup( "Import TVPaint Camera" );
+	var ui_tvpCameraOptionsGroup = ui_tvpCameraOptionsWindow.contents;
+	if (settings.data.uiMode < 2) DuAEF.DuScriptUI.addSeparator(ui_tvpCameraOptionsGroup,"TVPaint Camera");
+	var ui_tvpCameraLayerSelector = DuAEF.DuScriptUI.addSelector(ui_tvpCameraOptionsGroup);
+	ui_tvpCameraLayerSelector.addButton("Create a controller",DuAEF.DuBinary.toFile(w32_createcam_l),"Creates a controller for the camera",DuAEF.DuBinary.toFile(w32_createcam_r));
+	ui_tvpCameraLayerSelector.addButton("Precompose layers",DuAEF.DuBinary.toFile(w32_precompose_l),"Precomposes the layers and animates the precomposition",DuAEF.DuBinary.toFile(w32_precompose_r));
+	ui_tvpCameraLayerSelector.addButton("Use selected layer",DuAEF.DuBinary.toFile(w32_selectcam_l),"Animates the selected layer",DuAEF.DuBinary.toFile(w32_selectcam_r));
+	ui_tvpCameraLayerSelector.setCurrentIndex(0);
+	var ui_tvpCameraMethodSelector = DuAEF.DuScriptUI.addSelector(ui_tvpCameraOptionsGroup);
+	ui_tvpCameraMethodSelector.addButton("Animate position",DuAEF.DuBinary.toFile(w32_pos_l),"Animates the position of the layer",DuAEF.DuBinary.toFile(w32_pos_r));
+	ui_tvpCameraMethodSelector.addButton("Animate anchor point",DuAEF.DuBinary.toFile(w32_moveanchor_l),"Animates the anchor point of the layer (mimics TVPaint Camera)",DuAEF.DuBinary.toFile(w32_moveanchor_r));
+	ui_tvpCameraMethodSelector.setCurrentIndex(0);
+	var ui_tvpCameraParentButton = DuAEF.DuScriptUI.addCheckBox(ui_tvpCameraOptionsGroup,"Auto-parent layers",DuAEF.DuBinary.toFile(w25_parenttocam_l),"Automatically parents the layers to the camera",DuAEF.DuBinary.toFile(w25_parenttocam_r));
+	ui_tvpCameraParentButton.setChecked(true);
+	var ui_tvpCameraValidButton = DuAEF.DuScriptUI.addButton(ui_tvpCameraOptionsGroup,'Import...',DuAEF.DuBinary.toFile(w25_check_g),"Imports a TVPaint Camera",DuAEF.DuBinary.toFile(w25_check_r));
+
+
+	ui_tvpCameraOptionsWindow.tieTo(ui_tvpCameraOptionsButton);
+	ui_tvpCameraCancelButton.onClick = function (){ ui_tvpCameraOptionsWindow.hide(); };
+	ui_tvpCameraButton.onClick = ui_tvpCameraValidButton.onClick = ui_tvpCameraValidButton_clicked;
+
+
+
+	function ui_tvpCameraValidButton_clicked()
+	{
+		var camFile = File.openDialog("Choose the camera file you want to import",'TVP cam:*.cpt,All files:*.*',false);
+		if (!camFile) return;
+
+		app.beginUndoGroup('Duik - ' + "Import TVPaint Camera");
+
+		DuAEF.Duik.Camera.importTVPaintCamera(camFile,undefined,ui_tvpCameraLayerSelector.index,ui_tvpCameraParentButton.checked,ui_tvpCameraMethodSelector.index);
+
+		app.endUndoGroup();
+	}
