@@ -48,4 +48,8 @@
 #include 'icons/w25_precompshots_l.png.jsxinc'
 #include 'icons/w25_textbelow_l.png.jsxinc'
 #include 'icons/w25_textbelow_r.png.jsxinc'
+#include 'icons/w25_audition_l.png.jsxinc'
+#include 'icons/w25_audition_r.png.jsxinc'
+#include 'icons/w25_exportanim_r.png.jsxinc'
+#include 'icons/w25_exportanim_l.png.jsxinc'
 
