@@ -156,10 +156,10 @@
 
 
     //Import Animation
-	var ui_importAnimationWindow = DuAEF.DuScriptUI.createPopup();
+	var ui_importAnimationWindow = DuAEF.DuScriptUI.createPopup("Import Animation");
 	var ui_importAnimationGroup = ui_importAnimationWindow.contents;
 	var ui_keyframesSelector = DuAEF.DuScriptUI.addSelector(ui_importAnimationGroup);
-	/*ui_keyframesSelector.addButton("Only keyframes",DuAEF.DuBinary.toFile(w14_keyframesonly_l),"Imports only the keyframes.",DuAEF.DuBinary.toFile(w14_keyframesonly_r));
+	ui_keyframesSelector.addButton("Only keyframes",DuAEF.DuBinary.toFile(w14_keyframesonly_l),"Imports only the keyframes.",DuAEF.DuBinary.toFile(w14_keyframesonly_r));
 	ui_keyframesSelector.addButton("All properties",DuAEF.DuBinary.toFile(w14_allproperties_l),"Sets values on all properties.",DuAEF.DuBinary.toFile(w14_allproperties_r));
 	ui_keyframesSelector.setCurrentIndex(0);
 	var ui_importAnimationKeysTypeGroup = DuAEF.DuScriptUI.addGroup(ui_importAnimationGroup,'row');
@@ -176,9 +176,9 @@
 	ui_importAnimationOffsetSelector.addButton("Absolute",DuAEF.DuBinary.toFile(w14_absolute_l),"Replaces current values",DuAEF.DuBinary.toFile(w14_absolute_r));
 	var ui_importAnimationReplaceButton = DuAEF.DuScriptUI.addCheckBox(ui_importAnimationGroup,'Replace existing keyframes',undefined,"Replaces any existing keyframe on the properties before loading the new animation",undefined);
 	var ui_importAnimationValidButton = DuAEF.DuScriptUI.addButton(ui_importAnimationGroup,"Import",DuAEF.DuBinary.toFile(w25_check_g),"Imports an animation",DuAEF.DuBinary.toFile(w25_check_r));
-*/
+
 	//Storyboarder
-	var ui_storyboarderWindow = DuAEF.DuScriptUI.createPopup();
+	var ui_storyboarderWindow = DuAEF.DuScriptUI.createPopup("Import Storyboarder");
 	/*var ui_storyboarderGroup = ui_storyboarderWindow.contents;
 	var ui_storyboarderTextSelector = DuAEF.DuScriptUI.addSelector(ui_storyboarderGroup);
 	ui_storyboarderTextSelector.addButton("Overlay text",DuAEF.DuBinary.toFile(w32_overlaytext_l),"Overlays the text information.",DuAEF.DuBinary.toFile(w32_overlaytext_r));
@@ -205,7 +205,7 @@
 	ui_importAnimationWindow.tieTo(ui_importAnimOptionsButton);
 	//ui_importAnimationKeysAllButton.onClick = ui_importAnimationKeysAllButton_clicked;
 
-	ui_importKritaButton.onClick = ui_importKritaButton_clicked;
+	//ui_importKritaButton.onClick = ui_importKritaButton_clicked;
 
 	ui_storyboarderWindow.tieTo(ui_importStoryboardOptionsButton);
 	//ui_storyboarderValidButton.onClick = ui_importStoryboardButton.onClick = ui_storyboarderValidButton_clicked;
