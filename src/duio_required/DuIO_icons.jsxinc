@@ -1,0 +1,18 @@
+#include 'icons/w14_plus_m.png.jsxinc'
+#include 'icons/w14_plus_r.png.jsxinc'
+
+#include 'icons/w25_importanim_l.png.jsxinc'
+#include 'icons/w25_importanim_r.png.jsxinc'
+#include 'icons/w25_krita_l.png.jsxinc'
+#include 'icons/w25_krita_r.png.jsxinc'
+#include 'icons/w25_storyboard_r.png.jsxinc'
+#include 'icons/w25_storyboard_l.png.jsxinc'
+#include 'icons/w25_tvpcam_l.png.jsxinc'
+#include 'icons/w25_tvpcam_r.png.jsxinc'
+#include 'icons/w25_tvpclip_r.png.jsxinc'
+#include 'icons/w25_tvpclip_l.png.jsxinc'
+#include 'icons/w25_import_l.png.jsxinc'
+#include 'icons/w25_import_r.png.jsxinc'
+#include 'icons/w25_exportfile_r.png.jsxinc'
+#include 'icons/w25_exportfile_l.png.jsxinc'
+

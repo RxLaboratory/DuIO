@@ -1,0 +1,15 @@
+#include 'DuIO_license.jsxinc'
+
+//Encapsulate everything to avoid global variables
+(function(thisObj) {
+
+    //init DuAEF
+    #include '../DuAEF.jsxinc'
+    DuAEF.init("DuIO","1.0.0");
+
+    //icons
+    #include 'DuIO_icons.jsxinc'
+
+    // _______ UI SETUP _______
+	var ui_panel = DuAEF.DuScriptUI.createUI(thisObj);
+    var ui_contents = ui_panel.contents;
