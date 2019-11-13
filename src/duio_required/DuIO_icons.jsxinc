@@ -40,4 +40,12 @@
 #include 'icons/w25_exportfile_l.png.jsxinc'
 #include 'icons/w25_check_g.png.jsxinc'
 #include 'icons/w25_check_r.png.jsxinc'
+#include 'icons/w25_noprecomp_r.png.jsxinc'
+#include 'icons/w25_noprecomp_l.png.jsxinc'
+#include 'icons/w25_overlaytext_l.png.jsxinc'
+#include 'icons/w25_overlaytext_r.png.jsxinc'
+#include 'icons/w25_precompshots_r.png.jsxinc'
+#include 'icons/w25_precompshots_l.png.jsxinc'
+#include 'icons/w25_textbelow_l.png.jsxinc'
+#include 'icons/w25_textbelow_r.png.jsxinc'
 
