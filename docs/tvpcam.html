@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Nicolas Dufresne and contributors">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>TVPaint camera - DuIO Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="style.css" rel="stylesheet">
+  <link href="video.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "TVPaint camera";
+    var mkdocs_page_input_path = "tvpcam.md";
+    var mkdocs_page_url = "/tvpcam.html";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="icon icon-home"> DuIO Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="install.html">Installation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Import</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="import.html">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="import-animation.html">Animation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="tvpaint.html">TVPaint clip</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="tvpcam.html">TVPaint camera</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#import-tvpaint-camera">Import TVPaint Camera</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#setup">Setup</a></li>
+        
+            <li><a class="toctree-l4" href="#additionnal-panel">Additionnal panel</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="krita.html">Krita animation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="storyboarder.html">Storyboarder</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Export</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="export.html">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="export-animation.html">Animation</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="audition.html">Audition</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Development</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="duaef.html">The Duduf After Effects Framework</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="changelog.html">Changelog</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">License</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="license.html">DuIO license</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="gnu-gpl.html">GNU GPLv3</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="doc-license.html">Documentation license</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://rainboxlab.org/about/who-are-we/">Credits</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://rainboxlab.org/about/contact/">Contact</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://rainboxlab.org/about/donate/">Donate</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">DuIO Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Import &raquo;</li>
+        
+      
+    
+    <li>TVPaint camera</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="http://duio-docs.rainboxlab.org/edit/master/src-doc/docs/tvpcam.md"> Edit on Duio-Docs</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="import-tvpaint-camera"><img alt="import TVPaint Camera Icon" src="img/icons/tvpcam-icon-r.png" /> Import TVPaint Camera</h1>
+<p>Duik can re-create any TVPaint camera animation in After Effects.</p>
+<h2 id="setup">Setup</h2>
+<ol>
+<li>Export the camera from TVPaint (this is done from the camera settings in TVPaint).</li>
+<li>This camera can be imported along with its animation - position, scale, rotation - in After Effects.</li>
+</ol>
+<p>Once the camera has been imported, you can copy/paste its animation on a camera created with the <a href="https://duik-docs.rainboxlab.org/camera-2d.html">2D Camera</a> tool of <a href="https://rainboxlab.org/tools/duik/">Duik</a>:</p>
+<ul>
+<li>Copy the position property either to the position of the camera or the pan effect</li>
+<li>Copy the scale property either on the zoom or truck in/out effect</li>
+<li>Copy the rotation on the tilt effect.</li>
+</ul>
+<h2 id="additionnal-panel">Additionnal panel</h2>
+<p><img alt="import tvpaint cam option" src="img/screenshots/ImportTVPaint-optn.PNG" /></p>
+<ul>
+<li>
+<p>There are three ways to re-create the camera in After Effects:</p>
+<ul>
+<li>Using a Null object: creates a null object to get the animation of the camera.</li>
+<li>Precomposing the layers: will precompose all layers of the composition, and the camera movement will be applied to this precomposition.</li>
+<li>Use selected layer: applies the animation to the selected layer in the composition.</li>
+</ul>
+</li>
+<li>
+<p>Auto-parent layers will automatically link all the composition’s layers to the camera (keeping all existing links, parenting only layers which do not already have a parent layer).</p>
+</li>
+<li>
+<p>You can animate either the position or the anchor point of the camera.<br />
+Using the anchor point, the movement will be closer to what it was in TVPaint, which moves the frame instead of moving the layers, as using the position will be far easier to adjust and tweak.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Interpolation methods in TVPaint and After Effects differ completely. Some minor differences in the interpolations between After Effects and TVPaint might appear.</p>
+</div>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="krita.html" class="btn btn-neutral float-right" title="Krita animation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="tvpaint.html" class="btn btn-neutral" title="TVPaint clip"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>Copyright © 2019 Nicolas Dufresne and Rainbox Laboratory</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="tvpaint.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="krita.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="video.js" defer></script>
+      <script src="search/main.js" defer></script>
+
+</body>
+</html>

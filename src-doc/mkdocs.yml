@@ -1,0 +1,52 @@
+site_name: DuIO Documentation
+site_url: http://rainboxlab.org
+repo_url: http://duio-docs.rainboxlab.org
+edit_uri: edit/master/src-doc/docs/
+site_description: The DuIO comprehensive documentation
+site_author: Nicolas Dufresne and contributors
+copyright: 'Copyright © 2019 Nicolas Dufresne and Rainbox Laboratory'
+use_directory_urls: false
+theme:
+    name: readthedocs
+    custom_dir: theme/
+markdown_extensions:
+    - smarty
+    - footnotes
+    - tables
+    - admonition
+    - codehilite
+    - fenced_code
+    - toc
+extra_css:
+    - style.css
+    - video.css
+extra_javascript:
+    - video.js
+site_dir: ../docs/
+dev_addr: '127.0.0.1:8001'
+extra:
+    version: 1.0.0
+nav:
+    - Home: index.md
+    - Installation: install.md
+    - Import:
+        - Introduction: import.md
+        - Animation: import-animation.md
+        - TVPaint clip: tvpaint.md
+        - TVPaint camera: tvpcam.md
+        - Krita animation: krita.md
+        - Storyboarder: storyboarder.md
+    - Export:
+        - Introduction: export.md
+        - Animation: export-animation.md
+        - Audition: audition.md
+    - Development:
+        - The Duduf After Effects Framework: duaef.md
+    - Changelog: changelog.md
+    - License:
+        - DuIO license: license.md
+        - GNU GPLv3: gnu-gpl.md
+        - Documentation license: doc-license.md
+    - Credits: https://rainboxlab.org/about/who-are-we/
+    - Contact: https://rainboxlab.org/about/contact/
+    - Donate: https://rainboxlab.org/about/donate/
