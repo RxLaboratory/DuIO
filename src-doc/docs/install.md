@@ -26,6 +26,7 @@ You'll find several folders and files.
 - *README.txt* contains a lot of information to help you get started with DuIO.
 - The *Help* folder contains this help pages. Double click on the file *index.html* to open it.
 - The *ScriptUI Panels* folder contains the actual *DuIO* script you need to install.
+- The *Tools* folder contains other useful tools, especially the script to export clips from TVPaint versions before 11.
 
 ### **3 -** There are several ways to install DuIO very easily
 
