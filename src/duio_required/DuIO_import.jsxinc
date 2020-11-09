@@ -114,6 +114,19 @@
 		DuAEF.DuAE.App.endUndoGroup();
 	}
 
+	function ui_importOCAButton_Clicked ()
+	{
+		//select file
+		var file = File.openDialog("Select the .json OCA file.",'OCA json:*.oca,JSON: *.json,All files:*.*',false);
+		if (!file) return;
+
+		DuAEF.DuAE.App.beginUndoGroup("Import OCA");
+
+		DuAEF.OCA.import(file);
+
+		DuAEF.DuAE.App.endUndoGroup();
+	}
+
 	function ui_importKritaButton_clicked()
 	{
 		//select file
@@ -143,19 +156,20 @@
     //============ UI ===============
 
 	var ui_importAnimButtonGroup = DuAEF.DuScriptUI.addGroup(ui_importGroup);
-	var ui_importAnimButton = DuAEF.DuScriptUI.addButton(ui_importAnimButtonGroup,"Animation",DuAEF.DuBinary.toFile(w25_importanim_l),"Import animation",DuAEF.DuBinary.toFile(w25_importanim_r));
+	var ui_importAnimButton = DuAEF.DuScriptUI.addButton(ui_importAnimButtonGroup,"Keyframe Animation (duaef/json)",DuAEF.DuBinary.toFile(w25_importanim_l),"Import animation",DuAEF.DuBinary.toFile(w25_importanim_r));
 	var ui_importAnimOptionsButton = DuAEF.DuScriptUI.addButton(ui_importAnimButtonGroup,'',DuAEF.DuBinary.toFile(w14_plus_m),"Animation import options",DuAEF.DuBinary.toFile(w14_plus_r));
 	ui_importAnimOptionsButton.alignment = ['right','center'];
 
-	var ui_importTVPClipButton = DuAEF.DuScriptUI.addButton(ui_importGroup,"TVP Clip",DuAEF.DuBinary.toFile(w25_tvpclip_l),"Import TVPaint clip",DuAEF.DuBinary.toFile(w25_tvpclip_r));
+	var ui_importOCAButton = DuAEF.DuScriptUI.addButton(ui_importGroup,"Open Cel Animation (oca/json)",DuAEF.DuBinary.toFile(w25_krita_l),"Import an animation previously exported as a CSV file from Krita.",DuAEF.DuBinary.toFile(w25_krita_r));
+
+	var ui_importTVPClipButton = DuAEF.DuScriptUI.addButton(ui_importGroup,"TVP Clip (txt or json)",DuAEF.DuBinary.toFile(w25_tvpclip_l),"Import TVPaint clip",DuAEF.DuBinary.toFile(w25_tvpclip_r));
 	
-	var ui_importKritaButton = DuAEF.DuScriptUI.addButton(ui_importGroup,"Krita Animation",DuAEF.DuBinary.toFile(w25_krita_l),"Import an animation previously exported as a CSV file from Krita.",DuAEF.DuBinary.toFile(w25_krita_r));
+	var ui_importKritaButton = DuAEF.DuScriptUI.addButton(ui_importGroup,"Krita Animation (csv)",DuAEF.DuBinary.toFile(w25_krita_l),"Import an animation previously exported as a CSV file from Krita.",DuAEF.DuBinary.toFile(w25_krita_r));
 	
 	var ui_importStoryboardButtonGroup = DuAEF.DuScriptUI.addGroup(ui_importGroup);
 	var ui_importStoryboardButton = DuAEF.DuScriptUI.addButton(ui_importStoryboardButtonGroup,"Storyboarder",DuAEF.DuBinary.toFile(w25_storyboard_l),"Import Storyboarder",DuAEF.DuBinary.toFile(w25_storyboard_r));
 	var ui_importStoryboardOptionsButton = DuAEF.DuScriptUI.addButton(ui_importStoryboardButtonGroup,'',DuAEF.DuBinary.toFile(w14_plus_m),"Storyboarder import options",DuAEF.DuBinary.toFile(w14_plus_r));
 	ui_importStoryboardOptionsButton.alignment = ['right','center'];
-
 
     //Import Animation
 	var ui_importAnimationWindow = DuAEF.DuScriptUI.createPopup("Import Animation");
@@ -204,6 +218,7 @@
     ui_importTVPClipButton.onClick = ui_importTVPClipButton_clicked;
 
 	ui_importAnimButton.onClick = ui_importAnimationValidButton.onClick = ui_importAnimButton_clicked;
+	ui_importOCAButton.onClick = ui_importOCAButton_Clicked;
 	ui_importAnimationWindow.tieTo(ui_importAnimOptionsButton);
 	ui_importAnimationKeysAllButton.onClick = ui_importAnimationKeysAllButton_clicked;
 

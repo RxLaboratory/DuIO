@@ -6,6 +6,7 @@
     //init DuAEF
     #include '../DuAEF.jsxinc'
     DuAEF.init("DuIO","1.0.0");
+    DuAEF.debug = true;
 
     //icons
     #include 'DuIO_icons.jsxinc'
