@@ -52,4 +52,6 @@
 #include 'icons/w25_audition_r.png.jsxinc'
 #include 'icons/w25_exportanim_r.png.jsxinc'
 #include 'icons/w25_exportanim_l.png.jsxinc'
+#include 'icons/w25_oca_l.png.jsxinc'
+#include 'icons/w25_oca_r.png.jsxinc'
 

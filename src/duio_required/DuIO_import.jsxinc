@@ -160,7 +160,7 @@
 	var ui_importAnimOptionsButton = DuAEF.DuScriptUI.addButton(ui_importAnimButtonGroup,'',DuAEF.DuBinary.toFile(w14_plus_m),"Animation import options",DuAEF.DuBinary.toFile(w14_plus_r));
 	ui_importAnimOptionsButton.alignment = ['right','center'];
 
-	var ui_importOCAButton = DuAEF.DuScriptUI.addButton(ui_importGroup,"Open Cel Animation (oca/json)",DuAEF.DuBinary.toFile(w25_krita_l),"Import an animation previously exported as a CSV file from Krita.",DuAEF.DuBinary.toFile(w25_krita_r));
+	var ui_importOCAButton = DuAEF.DuScriptUI.addButton(ui_importGroup,"Open Cel Animation (oca/json)",DuAEF.DuBinary.toFile(w25_oca_l),"Import an animation previously exported as a CSV file from Krita.",DuAEF.DuBinary.toFile(w25_oca_r));
 
 	var ui_importTVPClipButton = DuAEF.DuScriptUI.addButton(ui_importGroup,"TVP Clip (txt or json)",DuAEF.DuBinary.toFile(w25_tvpclip_l),"Import TVPaint clip",DuAEF.DuBinary.toFile(w25_tvpclip_r));
 	
