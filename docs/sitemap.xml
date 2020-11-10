@@ -2,82 +2,87 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>http://rainboxlab.org/index.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/install.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/import.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/import-animation.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://rainboxlab.org/oca.html</loc>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/tvpaint.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/tvpcam.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/krita.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/storyboarder.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/export.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/export-animation.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/audition.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/duaef.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>http://rainboxlab.org/changelog.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://rainboxlab.org/license.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <loc>http://rainboxlab.org/licenses/license.html</loc>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://rainboxlab.org/gnu-gpl.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <loc>http://rainboxlab.org/licenses/gnu-gpl.html</loc>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>http://rainboxlab.org/doc-license.html</loc>
-     <lastmod>2019-11-21</lastmod>
+     <loc>http://rainboxlab.org/licenses/gfdl.html</loc>
+     <lastmod>2020-11-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>

@@ -32,6 +32,7 @@ nav:
     - Import:
         - Introduction: import.md
         - Animation: import-animation.md
+        - OCA: oca.md
         - TVPaint clip: tvpaint.md
         - TVPaint camera: tvpcam.md
         - Krita animation: krita.md
@@ -44,9 +45,9 @@ nav:
         - The Duduf After Effects Framework: duaef.md
     - Changelog: changelog.md
     - License:
-        - DuIO license: license.md
-        - GNU GPLv3: gnu-gpl.md
-        - Documentation license: doc-license.md
+        - DuIO License: licenses/license.md
+        - GNU GPLv3: licenses/gnu-gpl.md
+        - Documentation license: licenses/gfdl.md
     - Credits: https://rainboxlab.org/about/who-are-we/
     - Contact: https://rainboxlab.org/about/contact/
     - Donate: https://rainboxlab.org/about/donate/
