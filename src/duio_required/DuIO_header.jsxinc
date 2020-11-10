@@ -5,12 +5,21 @@
 
     //init DuAEF
     #include '../DuAEF.jsxinc'
-    DuAEF.init("DuIO","1.0.0");
+    DuAEF.init("DuIO","1.0.1");
+    DuAEF.forumURL = 'https://forum.rainboxlab.org';
+    DuAEF.chatURL = 'http://chat.rainboxlab.org';
+    DuAEF.bugReportURL = 'https://github.com/Rainbox-dev/DuAEF_DuIO/issues/new/choose';
+    DuAEF.featureRequestURL = 'https://github.com/Rainbox-dev/DuAEF_Duik/issues/new?template=feature_request.md';
+    DuAEF.aboutURL = 'https://rainboxlab.org/tools/duio/';
+    DuAEF.docURL = 'http://duio-docs.rainboxlab.org'
+
     //DuAEF.debug = true;
 
     //icons
     #include 'DuIO_icons.jsxinc'
 
     // _______ UI SETUP _______
-	var ui_panel = DuAEF.DuScriptUI.createUI(thisObj);
-    var ui_contents = ui_panel.contents;
+    DuAEF.scriptIcon = DuAEF.DuBinary.toFile(w18_rx_l);
+    DuAEF.scriptIconOver = DuAEF.DuBinary.toFile(w18_rx_r);
+	var ui_panel = DuAEF.DuScriptUI.createMainPanel(thisObj, false, true);
+    var ui_contents = ui_panel.mainGroup;
