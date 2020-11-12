@@ -2,6 +2,10 @@
 
 This is the list of what has changed since the first version of DuIO.
 
+## 2.0.1-Beta
+
+- Support for *Preserve Transparency* (*OCA* inherit alpha) option
+
 ## 2.0.0-Beta
 
 - Added [OCA](http://rainboxlab.org/tools/oca/) support.

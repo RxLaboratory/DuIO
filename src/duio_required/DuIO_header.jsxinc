@@ -5,7 +5,7 @@
 
     //init DuAEF
     #include '../DuAEF.jsxinc'
-    DuAEF.init("DuIO","2.0.0-Beta");
+    DuAEF.init("DuIO","2.0.1-Beta");
     DuAEF.forumURL = 'https://forum.rainboxlab.org';
     DuAEF.chatURL = 'http://chat.rainboxlab.org';
     DuAEF.bugReportURL = 'https://github.com/Rainbox-dev/DuAEF_DuIO/issues/new/choose';
