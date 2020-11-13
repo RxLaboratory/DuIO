@@ -22,3 +22,5 @@ This *OCA* import will import the most common features of all drawing/animation 
 - Layer Sizes and Coordinates
 - Document background color (as composition background color)
 - Document color depth (as project bits per channel, changed only if it's higher than the current project)
+
+![YOUTUBE](cjAMmYF8OtE)
