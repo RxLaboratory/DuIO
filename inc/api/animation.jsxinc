@@ -1,0 +1,98 @@
+/**
+ * The animation IO.
+ * @namespace
+ */
+DuIO.Animation = {};
+
+/**
+ * Copies all the animations on selected layers, and saves them to a Json file.
+ * @param {File} file The file to save the data
+ * @param {Layer[]|DuList<Layer>|LayerCollection} [layers] An array of Layers or LayerCollection with the animation. Selected layers from the current comp if omitted.
+ * @param {Boolean} [selectedKeysOnly] Wether to copy only selected keys or not. If omitted, will be true if there are selected keyframes, false otherwise.
+ * @param {float[]}	[timeRange] The time range, an array of two time values, in seconds. If omitted, will use the keyframes if some are selected, or the work area of the comp.
+ * @return {DuAELayerAnimation[]} The animations
+ */
+DuIO.Animation.toJson = function( file, layers, selectedKeysOnly, timeRange )
+{
+    layers = def( layers, DuAEComp.getSelectedLayers() );
+    if (layers.length == 0) return;
+    var comp = layers[0].containingComp;
+
+    //wether to store only selected keys if there are any
+    selectedKeysOnly = def( selectedKeysOnly, DuAELayer.haveSelectedKeys(layers) );
+    
+    //end time of the animation to store
+    var endTime = comp.workAreaDuration + comp.workAreaStart;
+    //start time of the animation to store
+    var startTime;
+    // If there are selected keys, look for the time of the first one
+    if (selectedKeysOnly) startTime = DuAELayer.firstKeyFrameTime(layers,true);
+    else startTime = comp.workAreaStart;
+
+    var data = {};
+	data.duio = {};
+	data.duio.version = DuESF.scriptVersion.fullVersion;
+	data.duio.animation = true;
+	data.duio.rig = false;
+
+	//copy the animation
+	var anims  = DuAELayer.getAnims( layers, selectedKeysOnly, [startTime, endTime] );
+	//clean data
+	data.layers = DuIO.Animation.cleanExportData(anims);
+
+	//save data
+	DuFile.saveJSON(data,file);
+
+    return anims;
+}
+
+/**
+ * Cleans data from an After Effects animation before exporting it.<br />
+ * This is a low-level function which you may need only if building your own export formats.<br />
+ * It cleans the data returned by the "getAnim" functions  (see {@link DuAELayer.getAnim}, {@link DuAELayer.getAnims}, {@link DuAEProperty.getAnim}) to be able to store it in a text file.
+ * @param {object}	data	The animation
+ * @return {object}	The data cleaned
+ */
+DuIO.Animation.cleanExportData = function (data)
+{
+	var newData = data;
+	if (newData.keys)
+	{
+		for (var k = 0, num =  newData.keys.length ; k < num; k++)
+		{
+			newData.keys[k]._inInterpolationType = DuIO.Animation.keyframeInterpolationTypeToName(newData.keys[k]._inInterpolationType);
+			newData.keys[k]._outInterpolationType = DuIO.Animation.keyframeInterpolationTypeToName(newData.keys[k]._outInterpolationType);
+		}
+	}
+	if (newData.anims)
+	{
+		for (var a = 0, num =  newData.anims.length ; a < num; a++)
+		{
+			newData.anims[a] = DuIO.Animation.cleanAnimExportData(newData.anims[a]);
+		}
+	}
+	if (newData instanceof Array)
+	{
+		for (var a = 0, num =  newData.length ; a < num; a++)
+		{
+			newData[a] = DuIO.Animation.cleanAnimExportData(newData[a]);
+		}
+	}
+
+	return newData;
+}
+
+/**
+ * Gets the name of an After Effects interpolation type.<br />
+ * This is a low-level function which you should not need.<br />
+ * It used by {@link DuIO.Animation.cleanAnimExportData} to store interpolation with their names.
+ * @param {KeyframeInterpolationType}	type	The After Effects interpolation type
+ * @return {string}	The interpolation name or empty string if not found
+ */
+DuIO.Animation.keyframeInterpolationTypeToName = function (type)
+{
+	if (type == KeyframeInterpolationType.LINEAR) return 'linear';
+	if (type == KeyframeInterpolationType.BEZIER) return 'bezier';
+	if (type == KeyframeInterpolationType.HOLD) return 'hold';
+	else return '';
+}
