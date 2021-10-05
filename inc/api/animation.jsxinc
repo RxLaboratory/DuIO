@@ -1,5 +1,5 @@
-/**
- * The animation IO.
+﻿/**
+ * Animation IO
  * @namespace
  */
 DuIO.Animation = {};
@@ -68,14 +68,14 @@ DuIO.Animation.cleanExportData = function (data)
 	{
 		for (var a = 0, num =  newData.anims.length ; a < num; a++)
 		{
-			newData.anims[a] = DuIO.Animation.cleanAnimExportData(newData.anims[a]);
+			newData.anims[a] = DuIO.Animation.cleanExportData(newData.anims[a]);
 		}
 	}
 	if (newData instanceof Array)
 	{
 		for (var a = 0, num =  newData.length ; a < num; a++)
 		{
-			newData[a] = DuIO.Animation.cleanAnimExportData(newData[a]);
+			newData[a] = DuIO.Animation.cleanExportData(newData[a]);
 		}
 	}
 
