@@ -107,4 +107,5 @@
  */
 var DuIO = {};
 
+#include "strings.jsxinc"
 #include "api/animation.jsxinc"
