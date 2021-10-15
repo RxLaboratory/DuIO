@@ -263,6 +263,25 @@ DuIO.Animation.cleanKeyframeImportData = function (keyframeData)
 		newData.outEase[i] = new KeyframeEase(newData.outEase[i].speed, outInfluence);
 	}
 
+	// If the value is a path
+	if (typeof newData.value.vertices !== 'undefined')
+	{
+		var s = new Shape();
+		var v = newData.value;
+		s.closed = v.closed;
+		s.featherInterps = v.featherInterps;
+		s.featherRadii = v.featherRadii;
+		s.featherRelCornerAngles = v.featherRelCornerAngles;
+		s.featherRelSegLocs = v.featherRelSegLocs;
+		s.featherSegLocs = v.featherSegLocs;
+		s.featherTensions = v.featherTensions;
+		s.featherTypes = v.featherTypes;
+		s.inTangents = v.inTangents;
+		s.outTangents = v.outTangents;
+		s.vertices = v.vertices;
+		newData.value = s;
+	}
+
 	return newData;
 }
 
