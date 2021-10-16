@@ -70,7 +70,7 @@ DuIO.Animation.paste = function ( layers, data, replace, offset, reverse, matchN
             DuAEProject.setProgressMode(true);
             DuAELayer.setAllAnims(
                 ui_pasteLayerPicker.getLayers(),
-                data,
+                remaining,
                 time,
                 undefined,
                 expressions,
@@ -78,7 +78,7 @@ DuIO.Animation.paste = function ( layers, data, replace, offset, reverse, matchN
                 replace,
                 matchNames,
                 offset,
-                false
+                reverse
             );
             DuAEProject.setProgressMode(false);
             DuAE.endUndoGroup(DuScriptUI.String.PASTE_KEYFRAMES);
