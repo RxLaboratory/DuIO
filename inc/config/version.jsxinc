@@ -1,0 +1,12 @@
+var scriptName = "DuIO";
+var scriptVersion = "3.0.1";
+var scriptAbout = 'A collection of tools for exporting and importing stuff in After Effects.';
+var companyName = "RxLaboratory";
+
+var chatURL = 'http://chat.rxlab.info';
+var bugReportURL = 'https://github.com/RxLaboratory/DuAEF_DuIO/issues/new/choose';
+var featureRequestURL = '';
+var aboutURL = 'http://rxlaboratory.org/tools/duio/';
+var docURL = 'http://duio.rxlab.guide';
+var companyURL = 'https://rxlaboratory.org';
+var rxVersionURL = 'http://version.rxlab.io';
