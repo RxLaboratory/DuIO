@@ -5,18 +5,17 @@
 
     //init DuAEF
     #include '../DuAEF.jsxinc'
-    DuAEF.init("DuIO","2.0.1-Beta");
-    DuAEF.forumURL = 'https://forum.rainboxlab.org';
-    DuAEF.chatURL = 'http://chat.rainboxlab.org';
-    DuAEF.bugReportURL = 'https://github.com/Rainbox-dev/DuAEF_DuIO/issues/new/choose';
-    DuAEF.featureRequestURL = 'https://github.com/Rainbox-dev/DuAEF_Duik/issues/new?template=feature_request.md';
+    DuAEF.init("DuIO","2.1.0");
+    DuAEF.chatURL = 'http://chat.rxlab.info';
+    DuAEF.bugReportURL = 'https://github.com/RxLaboratory/DuAEF_DuIO/issues/new/choose';
+    DuAEF.featureRequestURL = 'https://github.com/RxLaboratory/DuAEF_DuIO/issues/new/choose';
     DuAEF.aboutURL = 'https://rainboxlab.org/tools/duio/';
-    DuAEF.docURL = 'http://duio-docs.rainboxlab.org'
+    DuAEF.docURL = 'http://duio.rxlab.guide'
 
     //DuAEF.debug = true;
 
     //icons
-    #include 'DuIO_icons.jsxinc'
+#include 'DuIO_icons.jsxinc'
 
     // _______ UI SETUP _______
     DuAEF.scriptIcon = DuAEF.DuBinary.toFile(w18_rx_l);
