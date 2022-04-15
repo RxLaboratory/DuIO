@@ -1,0 +1,3 @@
+[submodule "DuAEF_DuIO"]
+	path = DuAEF_DuIO
+	url = https://github.com/RxLaboratory/DuAEF_DuIO.git
