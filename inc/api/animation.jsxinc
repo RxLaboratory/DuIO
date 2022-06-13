@@ -1,6 +1,7 @@
 ﻿/**
  * Animation IO
  * @namespace
+ * @category DuIO
  */
 DuIO.Animation = {};
 
