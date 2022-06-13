@@ -91,6 +91,7 @@
  * @copyright 2008 - 2021 Nicolas Dufresne, RxLaboratory
  * @version 3.0.0
  * @requires DuAEF>=1.0.0
+ * @category DuIO
  * @license GPL-3.0 <br />
  * DuIO is free software: you can redistribute it and/or modify<br />
  * it under the terms of the GNU General Public License as published by<br />
