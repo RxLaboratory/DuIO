@@ -99,13 +99,12 @@ DuIO.Animation.paste = function ( layers, data, replace, offset, reverse, matchN
  * @param {File} file The file to save the data
  * @param {Layer[]|DuList<Layer>|LayerCollection} [layers] An array of Layers or LayerCollection with the animation. Selected layers from the current comp if omitted.
  * @param {Boolean} [selectedKeysOnly] Wether to copy only selected keys or not. If omitted, will be true if there are selected keyframes, false otherwise.
- * @param {float[]}	[timeRange] The time range, an array of two time values, in seconds. If omitted, will use the keyframes if some are selected, or the work area of the comp.
  * @return {DuAELayerAnimation[]} The animations
  */
-DuIO.Animation.toJson = function( file, layers, selectedKeysOnly, timeRange )
+DuIO.Animation.toJson = function( file, layers, selectedKeysOnly)
 {
     layers = def( layers, DuAEComp.getSelectedLayers() );
-    if (layers.length == 0) return;
+    if (layers.length == 0) return null;
     var comp = layers[0].containingComp;
 
     //wether to store only selected keys if there are any
