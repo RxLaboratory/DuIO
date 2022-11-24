@@ -16,8 +16,9 @@ DuIO.Animation = {};
  * @param {string[]} [matchNames=[]] A filter to apply only on specific property types
  * @param {Boolean} [keyframesOnly=true] - If false, the value of properties without keyframes will be set too.
  * @param {Boolean} [expressions=false] - If true, the expression is set too.
+ * @param {Boolean} [dontMoveAncestors=false] - When set to true, the transform (position, rotation) values for ancestor layers (the ones without parent) will be offset to 0 before applying the animation.
  */
-DuIO.Animation.paste = function ( layers, data, replace, offset, reverse, matchNames, keyframesOnly, expressions )
+DuIO.Animation.paste = function ( layers, data, replace, offset, reverse, matchNames, keyframesOnly, expressions, dontMoveAncestors )
 {
 	var comp = DuAEProject.getActiveComp();
 	if (!comp) return;
@@ -38,11 +39,12 @@ DuIO.Animation.paste = function ( layers, data, replace, offset, reverse, matchN
 	matchNames = def(matchNames, []);
 	keyframesOnly = def( keyframesOnly, true);
 	expressions = def( expressions, !keyframesOnly);
+	dontMoveAncestors = def(dontMoveAncestors, false);
 
     DuAE.beginUndoGroup(DuScriptUI.String.PASTE_KEYFRAMES, false);
     DuAEProject.setProgressMode(true);
 
-    var remaining = DuAELayer.setAnims(layers, data, time, undefined, expressions, keyframesOnly, replace, matchNames, offset, reverse);
+    var remaining = DuAELayer.setAnims( layers, data, time, undefined, expressions, keyframesOnly, replace, matchNames, offset, reverse, dontMoveAncestors );
 
     if (remaining.length > 0)
     {
@@ -159,7 +161,7 @@ DuIO.Animation.fromJson = function( jsonFile, layers, keyframesOnly, matchNames,
 	//clean data
 	anim  = DuIO.Animation.cleanImportData(anim);
 
-	DuIO.Animation.paste( layers, anim, false, offset, reverse, matchNames, keyframesOnly );
+	DuIO.Animation.paste( layers, anim, false, offset, reverse, matchNames, keyframesOnly, undefined, true );
 
 	DuAEProject.setProgressMode(false);
 	DuAE.endUndoGroup( DuScriptUI.String.IMPORT_ANIMATION );
