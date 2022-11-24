@@ -56,7 +56,7 @@ DuIO.Animation.paste = function ( layers, data, replace, offset, reverse, matchN
             for (var j = 1, numLayers = comp.numLayers; j <= numLayers; j++)
             {
                 var l = comp.layer(j);
-                if (l.name == remaining[i]._name)
+                if (l.name.toLowerCase() == remaining[i]._name.toLowerCase())
                 {
                     ui_pasteLayerPicker.layerPicker.selectors[i].setCurrentIndex(j);
                     ok = true;
