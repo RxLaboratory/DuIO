@@ -1,0 +1,24 @@
+{
+    "title": "DuIO",
+    "hosts": [
+        {
+            "name": "aftereffects",
+            "title": "After Effects"
+        }
+    ],
+    "os": [
+        {
+            "name": "win",
+            "title": "Windows"
+        },
+        {
+            "name": "mac",
+            "title": "macOS"
+        }
+    ],
+    "userGuide": "http://duio.rxlab.guide",
+    "apiReference": "",
+    "website": "https://rxlaboratory.org/tools/duio/",
+    "description": "Collection of tools to import and export stuff from After Effects",
+    "tutorials": ""
+}
