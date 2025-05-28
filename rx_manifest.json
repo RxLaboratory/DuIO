@@ -1,8 +1,22 @@
 {
     "title": "DuIO",
+    "description": "Collection of tools to import and export stuff from After Effects.",
+    "readme": "https://github.com/RxLaboratory/DuIO/raw/refs/heads/rxlaboratorio-manifest-v2/HOME.md",
+    "tags": ["after effects","io", "animation", "rigging"],
+    "version": "2.1.1",
+    "date": "2024-11-20",
+    "prerelease-version": "",
+    "prerelease-date": "",
+    "changelog": "https://github.com/RxLaboratory/DuIO/releases",
+    "source": "https://github.com/RxLaboratory/DuIO",
+    "archive": "https://github.com/RxLaboratory/DuIO/releases",
+    "license": {
+        "title": "GNU GPL-v3",
+        "url": "https://rxlaboratorio.org/license-gpl/"
+    },
     "hosts": [
         {
-            "name": "aftereffects",
+            "name": "after-effects",
             "title": "After Effects"
         }
     ],
@@ -13,12 +27,42 @@
         },
         {
             "name": "mac",
-            "title": "macOS"
+            "title": "Mac OS"
         }
     ],
-    "userGuide": "http://duio.rxlab.guide",
-    "apiReference": "",
-    "website": "https://rxlaboratory.org/tools/duio/",
-    "description": "Collection of tools to import and export stuff from After Effects",
-    "tutorials": ""
+    "assets": [
+        {
+            "url": "https://github.com/RxLaboratory/DuIO/releases/download/v%version%/DuIO_WIN_%version%.zip",
+            "title": "DuIO for Windows",
+            "name": "duio-win",
+            "description": "Read the installation and update instructions in the [comprehensive documentation](http://duio.rxlab.guide).",
+            "hosts": [ { "name": "after-effects", "title": "After Effects" } ],
+            "os": [  { "name": "win", "title": "Windows"} ],
+            "links": [
+                {"title": "Documentation", "url": "http://duio.rxlab.guide"}
+                ],
+            "prerelease": false
+        },
+        {
+            "url": "https://github.com/RxLaboratory/DuIO/releases/download/v%version%/DuIO_MAC_%version%.zip",
+            "title": "DuIO for Mac OS",
+            "name": "duio-mac",
+            "description": "Read the installation and update instructions in the [comprehensive documentation](http://duio.rxlab.guide).",
+            "hosts": [ { "name": "after-effects", "title": "After Effects" } ],
+            "os": [  { "name": "win", "title": "Windows"} ],
+            "links": [
+                {"title": "Documentation", "url": "http://duio.rxlab.guide"}
+                ],
+            "prerelease": false
+        }
+    ],
+    "links":[
+        {"title": "User Guide", "url": "http://duio.rxlab.guide/"}
+    ],
+    "authors": [
+        {
+            "name": "Duduf",
+            "url": "https://duduf.com"
+        }
+    ]
 }
